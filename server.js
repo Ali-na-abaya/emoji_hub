@@ -16,4 +16,5 @@ app.get("/api/emojis", async (_, res) => {
   }
 });
 
-app.listen(8080, () => console.log("Backend running on http://localhost:8080"));
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => console.log(`✅ Backend running on port ${PORT}`));
